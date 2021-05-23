@@ -8,7 +8,7 @@ defmodule Pokedex.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Pokedex.Repo,
+      # Pokedex.Repo,
       # Start the Telemetry supervisor
       PokedexWeb.Telemetry,
       # Start the PubSub system

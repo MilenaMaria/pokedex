@@ -14,7 +14,7 @@ config :pokedex,
 config :pokedex, PokedexWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "6g0xKRlFJwUTQlsEEdLf4ofHNo0B2RibD4mCjj+KPXHAjnN8jAfighsezoHr2NHe",
-  render_errors: [view: PokedexWeb.ErrorView, accepts: ~w(html json), layout: false],
+  # render_errors: [view: PokedexWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: Pokedex.PubSub,
   live_view: [signing_salt: "NZDxpv0T"]
 
