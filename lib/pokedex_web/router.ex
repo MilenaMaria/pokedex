@@ -20,9 +20,11 @@ defmodule PokedexWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", PokedexWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", PokedexWeb do
+    pipe_through :api
+
+    get "/pokemon/:name", PageController, :index
+  end
 
   # Enables LiveDashboard only for development
   #

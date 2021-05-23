@@ -31,13 +31,13 @@ defmodule PokedexWeb.ConnCase do
     end
   end
 
-  setup tags do
-    :ok = Ecto.Adapters.SQL.Sandbox.checkout(Pokedex.Repo)
+  # setup tags do
+  #   :ok = Ecto.Adapters.SQL.Sandbox.checkout(Pokedex.Repo)
 
-    unless tags[:async] do
-      Ecto.Adapters.SQL.Sandbox.mode(Pokedex.Repo, {:shared, self()})
-    end
+  #   unless tags[:async] do
+  #     Ecto.Adapters.SQL.Sandbox.mode(Pokedex.Repo, {:shared, self()})
+  #   end
 
-    {:ok, conn: Phoenix.ConnTest.build_conn()}
-  end
+  #   {:ok, conn: Phoenix.ConnTest.build_conn()}
+  # end
 end
