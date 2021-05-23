@@ -3,7 +3,7 @@ defmodule PokedexWeb.PageControllerTest do
   use PokedexWeb.ConnCase
 
   describe "GET /" do
-    test "retorna conteudo da rota path" do
+    test "retorna conteúdo da rota path" do
       conn = get(build_conn(), "/")
 
       assert conn.resp_body =~ "Not Found"
@@ -25,7 +25,7 @@ defmodule PokedexWeb.PageControllerTest do
       assert response == ["base_experience", "height", "name", "types", "weight"]
     end
 
-    test "retorna 'não encontrado' quando a url for informada incorretamento" do
+    test "retorna 'não encontrado' quando a url for informada incorretamente" do
       conn = get(build_conn(), "/api/pokemon/dog")
 
       assert %Plug.Conn{status: 404} = conn
